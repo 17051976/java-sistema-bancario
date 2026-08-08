@@ -1,0 +1,41 @@
+package teste;
+
+import java.util.Scanner;
+
+public class Validate_Account {
+
+	
+	public void validacao() {
+		
+		Scanner caixa = new Scanner(System.in);
+		
+		System.out.print("Conta: ");
+		String conta = caixa.next();
+		System.out.print("Nome: ");
+		String nome = caixa.next();
+		System.out.print("Password: ");
+		int password = caixa.nextInt();
+		
+		if (conta.equals("admin") && nome.equals("admin") && 
+		password == 1234) {
+			System.out.println("Entrando...");
+		}
+		else {
+			while (!conta.equals("admin") || !nome.equals("admin") || password != 1234) {
+
+	            System.out.println("Dados incorretos. Tente novamente.");
+
+	            System.out.print("Conta: ");
+	            conta = caixa.next();
+
+	            System.out.print("Nome: ");
+	            nome = caixa.next();
+
+	            System.out.print("Senha: ");
+	            password = caixa.nextInt();
+	        }
+
+	    System.out.println("Dados corretos!");
+		}
+	}
+}
