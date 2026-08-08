@@ -1,0 +1,13 @@
+package teste;
+
+public class Menu {
+	
+	public void menu() {
+		System.out.println("Digite uma das opções abaixo:");
+		System.out.println("1 - Saldo");
+		System.out.println("2 - Depósito");
+		System.out.println("3 - Saque");
+		System.out.println("0 - Sair");
+	}
+
+}
